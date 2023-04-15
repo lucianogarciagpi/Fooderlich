@@ -14,12 +14,10 @@ class Card1 extends StatelessWidget {
   //  substitui.
   @override
   Widget build(BuildContext context) {
-
     //  3. Conteiner disposto no centro.
     return Center(
       // TODO: Card1 Decorate Container
       child: Container(
-
         //  1. Aplique um padding de 16 pixels em todos os lados do container
         padding: const EdgeInsets.all(16),
 
@@ -33,10 +31,8 @@ class Card1 extends StatelessWidget {
         //  3. Aplicar um BoxDecoration, descreve como desenhar
         //  uma caixa.
         decoration: const BoxDecoration(
-
           //  4. Informa para pintar uma imagem
           image: DecorationImage(
-
             //  5. define qual a imagem que é para ser pintada
             image: AssetImage('assets/mag1.png'),
 
@@ -51,10 +47,31 @@ class Card1 extends StatelessWidget {
         // TODO: Add a stack of text
         child: Stack(
           children: [
+            //  8. A categoria, "escolha do Editor", permanece onde está.
             Text(category, style: FooderlichTheme.darkTextTheme.bodyText1),
-            Text(title, style: FooderlichTheme.darkTextTheme.headline5),
-            Text(description, style: FooderlichTheme.darkTextTheme.bodyText1),
-            Text(chef, style: FooderlichTheme.darkTextTheme.bodyText1),
+
+            //  9. Posicionando o "Title" a 20 pixels da parte superior.
+            Positioned(
+              top: 20,
+              child:
+                  Text(title, style: FooderlichTheme.darkTextTheme.headline5),
+            ),
+
+            //  10. Posisionando a "Description" a 30 pixels do canto
+            //  inferior direito.
+            Positioned(
+              bottom: 30,
+              right: 0,
+              child: Text(description,
+                  style: FooderlichTheme.darkTextTheme.bodyText1),
+            ),
+
+            //  11. Posicionando o "Chef" a 10 pixels do canto inferior direito
+            Positioned(
+                bottom: 10,
+                right: 0,
+                child:
+                    Text(chef, style: FooderlichTheme.darkTextTheme.bodyText1)),
           ],
         ),
       ),
