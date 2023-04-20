@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fooderlich/circle_image.dart';
+import 'fooderlich_theme.dart';
 
 class AuthorCard extends StatelessWidget {
   //  1.  Parâmetros de AuthorCard
@@ -20,7 +22,33 @@ class AuthorCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(
-        children: const [],
+        // TODO 3: add aligment
+        children: [
+          //  1. Widget Row que agrupa informações do autor
+          //  Row, CircleImage e Text
+          Row(
+            children: [
+              CircleImage(imageProvider, imageRadius: 28),
+              //  2. Aplica um preenchimento entre o CircleImage e o Column
+              //  dentro do column, há dois widgets texts
+              const SizedBox(width: 8),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    authorName,
+                    style: FooderlichTheme.lightTextTheme.headline2,
+                  ),
+                  Text(
+                    title,
+                    style: FooderlichTheme.lightTextTheme.headline3,
+                  )
+                ],
+              ),
+            ],
+          ),
+          // TODO 2: Add IconButton
+        ],
       ),
     );
   }
