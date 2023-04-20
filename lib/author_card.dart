@@ -23,6 +23,7 @@ class AuthorCard extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: Row(
         // TODO 3: add aligment
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //  1. Widget Row que agrupa informações do autor
           //  Row, CircleImage e Text
@@ -48,6 +49,18 @@ class AuthorCard extends StatelessWidget {
             ],
           ),
           // TODO 2: Add IconButton
+          IconButton(
+            //  4. Definindo o ícone, tamanho e cor
+            icon: const Icon(Icons.favorite_border),
+            iconSize: 30,
+            color: Colors.grey[400],
+            //  5. Exiba um snackBar quando o usuario tocar no ícone
+            onPressed: () {
+              const snackBar = SnackBar(
+                content: Text('Press Favorite'));
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            },
+          )
         ],
       ),
     );
