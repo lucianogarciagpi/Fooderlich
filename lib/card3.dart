@@ -38,24 +38,24 @@ class Card3 extends StatelessWidget {
             Container(
               //  3. Aplica um preenchimento de 16px em todos os lados
               padding: const EdgeInsets.all(16),
-              //  4
+              //  4. Column para dispor outros widgets verticalmente
               child: Column(
-                //  5
+                //  5. Posicionando todos os widgets filhos a esqueda.
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  //  6
+                  //  6. Adicionando um Icon
                   const Icon(
                     Icons.book,
                     color: Colors.white,
                     size: 40,
                   ),
-                  //  7
+                  //  7. Aplicando um espaço de 8px verticalmente
                   const SizedBox(height: 8),
-                  //  8
+                  //  8. Adicione o widget de texto
                   Text('Recipe Trends',
                     style: FooderlichTheme.darkTextTheme.headline2,
                   ),
-                  //  9
+                  //  9. Aplicar um espaço de 30px verticalmente.
                   const SizedBox(height: 30),
                 ],
               ),
