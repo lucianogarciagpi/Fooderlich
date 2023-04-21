@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'fooderlich_theme.dart';
 
@@ -52,15 +54,94 @@ class Card3 extends StatelessWidget {
                   //  7. Aplicando um espaço de 8px verticalmente
                   const SizedBox(height: 8),
                   //  8. Adicione o widget de texto
-                  Text('Recipe Trends',
+                  Text(
+                    'Recipe Trends',
                     style: FooderlichTheme.darkTextTheme.headline2,
                   ),
                   //  9. Aplicar um espaço de 30px verticalmente.
                   const SizedBox(height: 30),
+                  //  10. Add Center widget with Chip widget children
+                  Center(
+                    //  11. Widget de layout que dispoe cada um dos widgets filhos
+                    //  adjacentes aos anteriores, não tendo espaço suficiente, ele
+                    //  encapsula para próxima linha
+                    child: Wrap(
+                      //  12. Filhos alinhados o mais próximo da esquerda.
+                      alignment: WrapAlignment.start,
+                      //  13. Espaço de 12px entre cada filho no eixo principal
+                      spacing: 12,
+                      //  14. Espaço de 12px no eixo cruzado
+                      runSpacing: 2,
+                      //  15. Lista dos widdtes chip.
+                      children: [
+                        Chip(
+                          label: Text(
+                            'Healthy',
+                            style: FooderlichTheme.darkTextTheme.bodyText1,
+                          ),
+                          backgroundColor: Colors.black.withOpacity(0.7),
+                          onDeleted: (){
+                            log('delete');
+                          },
+                        ),
+                        Chip(
+                          label: Text(
+                            'Vegan',
+                            style: FooderlichTheme.darkTextTheme.bodyText1,
+                          ),
+                          backgroundColor: Colors.black.withOpacity(0.7),
+                          onDeleted: (){
+                            log('delete');
+                          },
+                        ),
+                        Chip(
+                          label: Text(
+                            'Carrots',
+                            style: FooderlichTheme.darkTextTheme.bodyText1,
+                          ),
+                          backgroundColor: Colors.black.withOpacity(0.7),
+                        ),
+                        Chip(
+                          label: Text(
+                            'Greens',
+                            style: FooderlichTheme.darkTextTheme.bodyText1,
+                          ),
+                          backgroundColor: Colors.black.withOpacity(0.7),
+                        ),
+                        Chip(
+                          label: Text(
+                            'Wheat',
+                            style: FooderlichTheme.darkTextTheme.bodyText1,
+                          ),
+                          backgroundColor: Colors.black.withOpacity(0.7),
+                        ),
+                        Chip(
+                          label: Text(
+                            'Percentarian',
+                            style: FooderlichTheme.darkTextTheme.bodyText1,
+                          ),
+                          backgroundColor: Colors.black.withOpacity(0.7),
+                        ),
+                        Chip(
+                          label: Text(
+                            'Mint',
+                            style: FooderlichTheme.darkTextTheme.bodyText1,
+                          ),
+                          backgroundColor: Colors.black.withOpacity(0.7),
+                        ),
+                        Chip(
+                          label: Text(
+                            'Lemomgrass',
+                            style: FooderlichTheme.darkTextTheme.bodyText1,
+                          ),
+                          backgroundColor: Colors.black.withOpacity(0.7),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
-            )
-            // TODO: Add Center widget with Chip widget children
+            ),
           ],
         ),
       ),
