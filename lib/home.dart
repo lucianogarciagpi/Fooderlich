@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'card1.dart';
 import 'card2.dart';
+import 'card3.dart';
 
 //  1. Nova classe estende StatefulWidget
 class Home extends StatefulWidget {
@@ -22,7 +23,7 @@ class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     const Card1(),
     const Card2(),
-    //  TODO: Replace with Card3
+    const Card3(),
     Container(color: Colors.blue),
   ];
 
