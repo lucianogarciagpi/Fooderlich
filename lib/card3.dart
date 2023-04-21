@@ -33,7 +33,33 @@ class Card3 extends StatelessWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(10.0)),
               ),
             ),
-            // TODO: Add Container, Column, Icon and Text
+
+            // Add Container, Column, Icon and Text
+            Container(
+              //  3. Aplica um preenchimento de 16px em todos os lados
+              padding: const EdgeInsets.all(16),
+              //  4
+              child: Column(
+                //  5
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //  6
+                  const Icon(
+                    Icons.book,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                  //  7
+                  const SizedBox(height: 8),
+                  //  8
+                  Text('Recipe Trends',
+                    style: FooderlichTheme.darkTextTheme.headline2,
+                  ),
+                  //  9
+                  const SizedBox(height: 30),
+                ],
+              ),
+            )
             // TODO: Add Center widget with Chip widget children
           ],
         ),
