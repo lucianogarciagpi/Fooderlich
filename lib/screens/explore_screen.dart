@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fooderlich/api/mock_fooderlich_service.dart';
 
+import '../components/components.dart';
 import '../models/explore_data.dart';
 
 class ExploreScreen extends StatelessWidget {
@@ -31,9 +32,7 @@ class ExploreScreen extends StatelessWidget {
             //  5 "snapshop.data" retorna "ExploreData"
             final recipes = snapshot.data?.todayRecipes ?? [];
             //  TODO: Replace this with TodayRecipeListView
-            return const Center(
-              child: Text('Show TodayRecipeListView'),
-            );
+            return TodayRecipeListView(recipes: recipes);
           } else {
             //  6
             return const Center(
